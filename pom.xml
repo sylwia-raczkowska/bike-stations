@@ -50,7 +50,8 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
+		</dependency><dependency><groupId>junit</groupId><artifactId>junit</artifactId><scope>test</scope></dependency>
+
 	</dependencies>
 
 	<build>
