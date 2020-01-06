@@ -4,7 +4,6 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 
-@Data
 @Entity
 class Position {
 	private boolean available;
