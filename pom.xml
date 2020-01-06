@@ -28,14 +28,11 @@
 		</dependency>
 
 		<dependency>
-<<<<<<< HEAD
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
 		<dependency>
-=======
->>>>>>> 94c5cdf... Initial commit
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
@@ -49,16 +46,12 @@
 		</dependency>
 
 		<dependency>
-<<<<<<< HEAD
     		<groupId>com.google.guava</groupId>
     		<artifactId>guava</artifactId>
     		<version>28.1-jre</version>
 		</dependency>
 
-
 		<dependency>
-=======
->>>>>>> 94c5cdf... Initial commit
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -69,15 +62,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-<<<<<<< HEAD
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
-		</dependency><dependency><groupId>junit</groupId><artifactId>junit</artifactId><scope>test</scope></dependency>
+		</dependency>
 
-=======
->>>>>>> 94c5cdf... Initial commit
 	</dependencies>
 
 	<build>
