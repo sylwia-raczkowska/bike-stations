@@ -1,5 +1,6 @@
 package com.raczkowska.citynav.station;
 
+<<<<<<< HEAD
 import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
@@ -26,4 +27,17 @@ class Station {
 	@OneToMany(mappedBy = "station")
 	@BatchSize(size = 10)
 	private Set<Position> positionSet;
+=======
+import lombok.Data;
+
+import javax.persistence.Entity;
+import java.util.Set;
+
+@Data
+@Entity
+class Station {
+	private Long id;
+	private String name;
+	private Set<Long> bikeSet;
+>>>>>>> 94c5cdf... Initial commit
 }

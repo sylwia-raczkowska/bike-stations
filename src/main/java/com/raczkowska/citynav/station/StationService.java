@@ -1,5 +1,6 @@
 package com.raczkowska.citynav.station;
 
+<<<<<<< HEAD
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -54,4 +55,15 @@ class StationService {
 	}
 
 	private final StationRepository stationRepository;
+=======
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+class StationService {
+	public List<StationsResponse> getStationsState() {
+		return null;
+	}
+>>>>>>> 94c5cdf... Initial commit
 }
