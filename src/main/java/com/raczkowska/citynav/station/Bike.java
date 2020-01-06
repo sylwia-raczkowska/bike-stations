@@ -1,8 +1,10 @@
 package com.raczkowska.citynav.station;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.Entity;
@@ -12,16 +14,15 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-@Builder
 @Entity
 @Data
+@Builder
 @EqualsAndHashCode(exclude="station")
 @ToString(exclude="station")
-class Position {
+class Bike {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	private boolean available;
+	private Long bikeId;
 	@ManyToOne
 	@JoinColumn(name = "stationId")
 	private Station station;

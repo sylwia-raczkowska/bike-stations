@@ -11,14 +11,14 @@ import java.util.List;
 @Service
 @Slf4j
 class StationService {
-	List<StationsResponse> getStationsState() {
+	List<StationResponse> getStationsState() {
 		log.info("getStationsState");
-		List<StationsResponse> responseList = new java.util.ArrayList<>(Collections.emptyList());
+		List<StationResponse> responseList = new java.util.ArrayList<>(Collections.emptyList());
 		stationRepository.findAll().forEach(station -> {
-				Integer availablePositionAmount = Math.toIntExact(
+				int availablePositionAmount = Math.toIntExact(
 					station.getPositionSet().stream().filter(Position::isAvailable).count());
-				Integer occupiedPositionAmount = station.getPositionSet().size() - availablePositionAmount;
-				responseList.add(StationsResponse.builder()
+				int occupiedPositionAmount = station.getPositionSet().size() - availablePositionAmount;
+				responseList.add(StationResponse.builder()
 					.name(station.getName())
 					.availableBikesAmount(station.getBikeSet().size())
 					.availablePositionAmount(availablePositionAmount)
@@ -50,9 +50,7 @@ class StationService {
 		station.setName(stationDetails.getName());
 		station.setBikeSet(stationDetails.getBikeSet());
 		station.setPositionSet(stationDetails.getPositionSet());
-		Station savedStation = stationRepository.save(station);
-		log.info("Station saved= {}", savedStation);
-		return savedStation;
+		return stationRepository.save(station);
 	}
 
 	private final StationRepository stationRepository;

@@ -1,11 +1,15 @@
 package com.raczkowska.citynav.station;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-class StationsResponse {
+@NoArgsConstructor
+@AllArgsConstructor
+class StationResponse {
 	private String name;
 	private Integer availablePositionAmount;
 	private Integer occupiedPositionAmount;
