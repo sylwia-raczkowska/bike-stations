@@ -1,6 +1,5 @@
 package com.raczkowska.citynav.station;
 
-<<<<<<< HEAD
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -26,14 +25,4 @@ class Position {
 	@ManyToOne
 	@JoinColumn(name = "stationId")
 	private Station station;
-=======
-import lombok.Data;
-
-import javax.persistence.Entity;
-
-@Data
-@Entity
-class Position {
-	private boolean available;
->>>>>>> 94c5cdf... Initial commit
 }
