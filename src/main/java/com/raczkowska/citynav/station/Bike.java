@@ -7,22 +7,27 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 @Data
 @Builder
-@EqualsAndHashCode(exclude="station")
-@ToString(exclude="station")
+@EqualsAndHashCode(exclude={"station", "position"})
+@ToString(exclude={"station", "position"})
+@NoArgsConstructor
+@AllArgsConstructor
 class Bike {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue
 	private Long bikeId;
+	@OneToOne(cascade = CascadeType.ALL)
+	private Position position;
 	@ManyToOne
 	@JoinColumn(name = "stationId")
 	private Station station;
